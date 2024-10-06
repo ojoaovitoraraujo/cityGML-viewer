@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<core:CityModel xmlns:core="http://www.opengis.net/citygml/2.0"
+                xmlns:gml="http://www.opengis.net/gml"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://www.opengis.net/citygml/2.0 http://schemas.opengis.net/citygml/building/2.0/cityGML.xsd">
+    <gml:boundedBy>
+        <gml:Envelope srsDimension="3" srsName="urn:ogc:def:crs:EPSG::4326">
+            <gml:lowerCorner>52.0 13.0 0.0</gml:lowerCorner>
+            <gml:upperCorner>52.1 13.1 10.0</gml:upperCorner>
+        </gml:Envelope>
+    </gml:boundedBy>
+    
+    <!-- Building Feature -->
+    <core:cityObjectMember>
+        <bldg:Building xmlns:bldg="http://www.opengis.net/citygml/building/2.0">
+            <gml:boundedBy>
+                <gml:Envelope srsDimension="3">
+                    <gml:lowerCorner>52.0 13.0 0.0</gml:lowerCorner>
+                    <gml:upperCorner>52.0 13.1 10.0</gml:upperCorner>
+                </gml:Envelope>
+            </gml:boundedBy>
+            <bldg:measuredHeight uom="m">10</bldg:measuredHeight>
+            <bldg:storeysAboveGround>2</bldg:storeysAboveGround>
+
+            <!-- Building Geometry -->
+            <bldg:boundedBy>
+                <bldg:WallSurface>
+                    <bldg:lod2MultiSurface>
+                        <gml:MultiSurface>
+                            <gml:surfaceMember>
+                                <gml:Polygon>
+                                    <gml:exterior>
+                                        <gml:LinearRing>
+                                            <gml:posList>
+                                                13.0 52.0 0.0  13.1 52.0 0.0
+                                                13.1 52.1 0.0  13.0 52.1 0.0
+                                            </gml:posList>
+                                        </gml:LinearRing>
+                                    </gml:exterior>
+                                </gml:Polygon>
+                            </gml:surfaceMember>
+                        </gml:MultiSurface>
+                    </bldg:lod2MultiSurface>
+                </bldg:WallSurface>
+            </bldg:boundedBy>
+
+            <!-- Roof Surface -->
+            <bldg:boundedBy>
+                <bldg:RoofSurface>
+                    <bldg:lod2MultiSurface>
+                        <gml:MultiSurface>
+                            <gml:surfaceMember>
+                                <gml:Polygon>
+                                    <gml:exterior>
+                                        <gml:LinearRing>
+                                            <gml:posList>
+                                                13.0 52.0 10.0  13.1 52.0 10.0
+                                                13.1 52.1 10.0  13.0 52.1 10.0
+                                            </gml:posList>
+                                        </gml:LinearRing>
+                                    </gml:exterior>
+                                </gml:Polygon>
+                            </gml:surfaceMember>
+                        </gml:MultiSurface>
+                    </bldg:lod2MultiSurface>
+                </bldg:RoofSurface>
+            </bldg:boundedBy>
+        </bldg:Building>
+    </core:cityObjectMember>
+</core:CityModel>
